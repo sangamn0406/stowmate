@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --deep-space-blue: #1A237E;
+  --astronaut-gray: #607D8B;
+  --nasa-orange: #FF6D00;
+  --lunar-white: #F5F5F5;
+  --charcoal-black: #212121;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply text-[#212121] dark:text-white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.dark {
+  --deep-space-blue: #303F9F;
+  --astronaut-gray: #78909C;
+  --nasa-orange: #FF9E40;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#1A237E] hover:bg-[#303F9F] text-white font-bold py-2 px-6 rounded-md transition-all duration-300 dark:bg-[#303F9F] dark:hover:bg-[#3949AB];
+  }
+
+  .btn-secondary {
+    @apply bg-[#607D8B] hover:bg-[#78909C] text-white font-bold py-2 px-6 rounded-md transition-all duration-300 dark:bg-[#78909C] dark:hover:bg-[#90A4AE];
+  }
+
+  .btn-accent {
+    @apply bg-[#FF6D00] hover:bg-[#FF9E40] text-white font-bold py-2 px-6 rounded-md transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-[#1A237E] dark:text-[#5C6BC0];
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8 py-12 md:py-24;
+  }
+}
